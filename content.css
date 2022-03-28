@@ -1,0 +1,133 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap";
+
+:root {
+	--color-green: #50fa7b;
+	--color-purple: #3A3856;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	background: #282a36;
+	color: white;
+	font-family: 'Poppins', sans-serif;
+}
+
+header{
+	padding: 30px;
+	border-bottom: 1px solid #333;
+	background: rgba(0, 0, 0, 0.103);
+}
+
+#content-name {
+	text-align: center;
+	padding:32px;
+}
+
+#content-name h1 {
+	font-size: 52px;
+	line-height: 52px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.links {
+	text-align: center;
+}
+
+.links a {
+	color: white;
+	font-size: 18px;
+	line-height: 28px;
+	margin: 0 16px;
+	text-decoration: none
+}
+
+.links a:hover{
+	color: var(--color-green);
+	transition: color 200ms;
+}
+
+/*=== CARDS ===*/
+
+.cards {
+	max-width: 800px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
+	font-size: 14px;
+	padding-bottom: 50px;
+}
+
+.card {
+	background-color: var(--color-purple);
+}
+
+.card__image-container img {
+	width: 100%;
+}
+
+.card__content,
+.card__info {
+	padding: 24px;
+}
+
+.card__info {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.card__author {
+	background-color:var(--color-purple);
+	filter:brightness(90%);
+	padding: 5px 20px;
+	border-radius: 20px;
+	text-align: center;
+}
+
+/* === MODAL === 	*/
+.modal-overlay {
+	background-color: rgba(0, 0, 0, 0.7);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.modal {
+	background-color: var(--color-purple);
+	height: 90%;
+	width: 90%;
+	margin: 5vh auto;
+	position: relative;
+}
+
+.modal .close-modal {
+	color: black;
+	position: absolute;
+	right: 8px;
+	top: 8px;
+	cursor: pointer;
+}
+
+/* === MODAL.ACTIVE === 	*/
+
+.modal-overlay.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+iframe {
+	width: 98.5%;
+	height: 90%;
+	position: absolute;
+	top: 6.5%;
+	left: 0.5%;
+}
