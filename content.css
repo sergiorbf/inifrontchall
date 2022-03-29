@@ -66,6 +66,7 @@ header{
 
 .card {
 	background-color: var(--color-purple);
+	cursor: pointer;
 }
 
 .card__image-container img {
@@ -107,6 +108,21 @@ header{
 	width: 90%;
 	margin: 5vh auto;
 	position: relative;
+	transition: 200ms;
+}
+
+.modal.maximized{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+.modal .maximize-modal{
+	color: black;
+	position: absolute;
+	right: 36px;
+	top: 8px;
+	cursor: pointer;
 }
 
 .modal .close-modal {
@@ -121,7 +137,7 @@ header{
 
 .modal-overlay.active {
 	opacity: 1;
-	visibility: visible;
+	visibility: visible;	
 }
 
 iframe {

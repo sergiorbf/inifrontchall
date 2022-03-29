@@ -1,5 +1,8 @@
-const modalOverlay = document.querySelector('.modal-overlay')
-const cards = document.querySelectorAll('.card')
+const modalOverlay = document.querySelector('.modal-overlay');
+const cards = document.querySelectorAll('.card');
+const maximizeButton = document.querySelector('.maximize-modal');
+const modal = document.querySelector(".modal");
+const closeButton = document.querySelector(".close-modal");
 
 for (let card of cards) {
 	card.addEventListener("click",function(){
@@ -9,8 +12,12 @@ for (let card of cards) {
 	})
 }
 
-	document.querySelector(".close-modal").addEventListener("click", function(){
-		modalOverlay.classList.remove("active")
-		modalOverlay.querySelector("iframe").src = ""
-	})
+closeButton.addEventListener("click", function(){
+	modalOverlay.classList.remove("active")
+	modalOverlay.querySelector("iframe").src = ""
+	modal.classList.remove("maximized")
+})
 
+maximizeButton.addEventListener("click", function(){
+	modal.classList.toggle("maximized")
+})
